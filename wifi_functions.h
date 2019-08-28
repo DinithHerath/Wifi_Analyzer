@@ -61,7 +61,6 @@ void WiFiScan()
   Serial.println("");
   InitWiFiSilent();
   JSONencoder.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
-  Serial.println("Sending message to MQTT topic..");
   Serial.println(JSONencoder.measureLength());
   Serial.println(JSONmessageBuffer);
 }
