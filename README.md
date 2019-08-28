@@ -1,6 +1,10 @@
 # Wifi Analyzer
 This is the code for the wifi analyzer of the IoT 2019 module.
- ![Main Page](readme/Git_home_wifi_analyzer.png)
+ 
+ <p align="center"> 
+<img src="readme/Git_home_wifi_analyzer.png">
+</p>
+
 # Installing Procedure
  1. First set up the arduino to upload the code for the **NodeMCU v1.0**
  2. Then install the PubSubClient.h library using the following link https://github.com/knolleary/pubsubclient
