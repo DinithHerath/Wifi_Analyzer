@@ -17,6 +17,12 @@ void setup()
 void loop()
 {
   WiFiScan();
+  PublishData();
+  delay(1000);
+}
+
+void PublishData()
+{
   if (!client.connected())
   {
     ReconnectSilent();
@@ -30,5 +36,4 @@ void loop()
   {
     Serial.println("Error sending message");
   }
-  delay(1000);
 }
