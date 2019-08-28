@@ -36,7 +36,6 @@ void WiFiScan()
 {
   StaticJsonBuffer<300> JSONbuffer;
   JsonObject &JSONencoder = JSONbuffer.createObject();
-
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
   delay(100);
@@ -47,9 +46,11 @@ void WiFiScan()
     Serial.println("no networks found");
   else
   {
+    scanCount++;
     Serial.print(n);
     Serial.println(" networks found");
-    for (int i = 0; i < n; ++i)
+    JSONencoder["id"] = scanCount;
+    for (int i = 0; i < n; i++)
     {
       if (WiFi.SSID(i) != ssid)
       {
