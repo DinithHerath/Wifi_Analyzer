@@ -63,7 +63,10 @@ void WiFiScan()
       Serial.print(")");
       Serial.print((WiFi.encryptionType(i) == ENC_TYPE_NONE) ? " " : "*");
       Serial.println(WiFi.channel(i));
-      JSONencoder[String(WiFi.SSID(i))] = int(WiFi.RSSI(i));
+      if (WiFi.SSID(i) != ssid)
+      {
+        JSONencoder[String(WiFi.SSID(i))] = int(WiFi.RSSI(i));
+      }
       delay(10);
     }
   }
