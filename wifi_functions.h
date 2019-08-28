@@ -53,17 +53,9 @@ void WiFiScan()
     Serial.println(" networks found");
     for (int i = 0; i < n; ++i)
     {
-      Serial.print(i + 1);
-      Serial.print(": ");
-      Serial.print(WiFi.SSID(i));
-      Serial.print(" (");
-      Serial.print(WiFi.RSSI(i));
-      Serial.print(")");
-      Serial.print((WiFi.encryptionType(i) == ENC_TYPE_NONE) ? " " : "*");
-      Serial.println(WiFi.channel(i));
       if (WiFi.SSID(i) != ssid)
       {
-        JSONencoder[String(WiFi.SSID(i))] = int(WiFi.RSSI(i));
+        JSONencoder[String(WiFi.SSID(i)) + " " + String(WiFi.channel(i))] = int(WiFi.RSSI(i));
       }
       delay(10);
     }
