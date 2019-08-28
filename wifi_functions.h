@@ -30,9 +30,7 @@ void InitWiFiSilent()
   {
     delay(20);
   }
-
-  randomSeed(micros());
-
+  delay(500);
   Serial.println("WiFi connected");
 }
 
