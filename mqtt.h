@@ -41,9 +41,6 @@ void ReconnectSilent()
     clientId += String(random(0xffff), HEX);
     if (client.connect(clientId.c_str()))
     {
-      // Serial.println("connected");
-      // client.publish("ENTC/Wifi_Outgoing", "Welcome to ENTC WiFi Analyzer | Portal");
-      // client.subscribe("ENTC/Wifi_incoming");
     }
     else
     {
