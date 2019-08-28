@@ -53,7 +53,7 @@ void WiFiScan()
     {
       if (WiFi.SSID(i) != ssid)
       {
-        JSONencoder[String(WiFi.SSID(i)) + " " + String(WiFi.channel(i))] = int(WiFi.RSSI(i));
+        JSONencoder[String(WiFi.SSID(i)) + String(WiFi.channel(i))] = int(WiFi.RSSI(i)); //Output in the form WiFi1    
       }
       delay(10);
     }
