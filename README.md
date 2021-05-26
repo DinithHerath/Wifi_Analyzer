@@ -1,5 +1,5 @@
 # Wifi Analyzer
-This is the code for the wifi analyzer of the IoT 2019 module.
+This is the **Arduino** code for the wifi analyzer of the IoT 2019 module.
  
  <p align="center"> 
 <img src="readme/Git_home_wifi_analyzer.png">
